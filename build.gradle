@@ -1,0 +1,30 @@
+subprojects {
+    apply plugin: 'java'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    javadoc {
+        options.encoding = 'UTF-8'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+    }
+
+    tasks.named('test') {
+        useJUnitPlatform()
+        testLogging {
+            events "PASSED", 
+                "SKIPPED", 
+                "FAILED", 
+                "STANDARD_OUT", 
+                "STANDARD_ERROR"
+        }
+    }
+}
