@@ -1,17 +1,14 @@
 package ru.jankbyte.vacancyparser.parser.site;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.jsoup.nodes.Document;
-
 import org.jsoup.nodes.Element;
 
 import ru.jankbyte.vacancyparser.parser.SiteParser;
-
 import ru.jankbyte.vacancyparser.Vacancy.Builder;
 import ru.jankbyte.vacancyparser.Vacancy;
-
-import java.util.List;
 
 public final class HeadHunterParser extends SiteParser {
     public HeadHunterParser(String url) throws IOException {
